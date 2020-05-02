@@ -11,9 +11,9 @@ webdriver.get('https://www.instagram.com/accounts/login/?source=auth_switcher')
 sleep(randint(3,4))
 
 username = webdriver.find_element_by_name('username')
-username.send_keys('towncarpacific@gmail.com')
+username.send_keys('yourusername')
 password = webdriver.find_element_by_name('password')
-password.send_keys('444peace')
+password.send_keys('yourpassword')
 
 
 #login click
