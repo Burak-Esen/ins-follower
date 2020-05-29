@@ -1,15 +1,10 @@
 from time import strftime, sleep
-from selenium import webdriver
 from random import randint
 from selenium.webdriver.common.keys import Keys
 import pandas as pd
 
-def commentAndFollow(webdriver, nProfile:int, hashtag_list: list):
-    #
-    # BURASI HASHTAG LİSTESİ
-    #
 
-    #
+def commentAndFollow(webdriver, nProfile:int, hashtag_list: list):
     #İLK KULLANIMDAN SONRA ALLTAKİ SATIRI YORUM SATIRI YAPIP SONRAKİ İKİ SATIRI TEKRAR YORUM SATIRI OLMAKTAN ÇIKARMAK GEREKİYOR
     prev_user_list = [] # - if it's the first time you run it, use this line and comment the two below
     # prev_user_list = pd.read_csv('20181203-224633_users_followed_list.csv', delimiter=',').iloc[:,1:2] # useful to build a user log
@@ -47,7 +42,7 @@ def commentAndFollow(webdriver, nProfile:int, hashtag_list: list):
                         
                         button_like.click()
                         likes += 1
-                        sleep(randint(18,25))
+                        sleep(randint(18, 25))
 
                         # Comments and tracker
                         comm_prob = randint(1,10)
